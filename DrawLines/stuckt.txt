@@ -1,0 +1,23 @@
+//ETF篮子信息
+struct ETF_INFO_BASKET {
+	char MARKET_CODE;//市场代码	是	[1301]
+	char SGSH_TX_CODE[8];//申购赎回代码	是	
+	char SEC_CODE[20];//证券代码	是	
+	char SEC_NAME[16];//      	证券名称		
+	int STOCK_VOL;//        	股票数量		
+	char CASH_REPL_FLAG;//     	替代标志		[1883]
+	double OVER_RATIO;// 	溢价比例		
+	double CASH_REPL_AMT;//	现金替代金额		
+	int TX_DATE;//           	INT	交易日期	是	
+	int MIN_BUY_UNIT;//最小申购单位     			
+	double CASH_BACK_AMT;//赎回替代金额		
+	char BELONG_MARKET_CODE;//挂牌市场	是	[1301]
+
+	double ORDER_MONEY;//委托时临时使用的金额字段
+	int ORDER_AMT;//委托时临时使用的数量字段
+	int ORDER_AMT1;//委托时临时使用的数量字段，该数量代表冻结的可交易股份
+
+	i64 si0;//证券索引
+	int si;//证券位置,用sec_covert_index转换si0得到
+
+};
